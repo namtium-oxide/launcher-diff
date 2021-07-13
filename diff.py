@@ -30,6 +30,12 @@ for filename in files:
         launch_info = json.load(fd)
         walk(key_versions, launch_info)
 
+print("SUMMARY:")
+for k in sorted(key_versions.keys()):
+    print(k)
+
+print("\nDIFFERENCES:")
+
 version_keys = {}
 
 for k, v in key_versions.items():
